@@ -4,8 +4,7 @@ import com.springboot.hello01.domain.Hospital;
 import org.springframework.context.annotation.Bean;
 import org.springframework.context.annotation.Configuration;
 
-// springboot 사용
-@Configuration
+@Configuration // springboot 적용
 public class ParserFactory {
 
     @Bean

@@ -33,6 +33,8 @@ public class HospitalParser implements Parser<Hospital> {
 
         Hospital hospital = new Hospital();
         // String에서 int로 파싱
+        // 숫자도 split을 해서 row에 넣게 되면 spring타입으로 저장되기 때문에 int 타입으로 바꿔줘야됨
+        // 제일 첫번째 row 와 마지막 row는 "," 이걸로 split 했기 때문에 ", < 이렇게 되어있는건 replace를 사용하여 삭제
         hospital.setId(Integer.parseInt(row[0].replace("\"","")));
         hospital.setOpenServiceName(row[1]);
         hospital.setOpenLocalGovernmentCode(Integer.parseInt(row[3]));
